@@ -4,9 +4,6 @@ services:
   app:
     build:
       context: .
-    command: >
-      sh -c "python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     volumes:
@@ -17,6 +14,7 @@ services:
 
   db:
     image: postgres:13-alpine
+    container_name: "postgres"
     ports:
       - "5432:5432"
     volumes:
