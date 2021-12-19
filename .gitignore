@@ -131,3 +131,5 @@ dmypy.json
 
 # media
 media/
+
+venv_trello/
